@@ -23,19 +23,20 @@ public class UserServiceImpl implements UserService{
 
     public List<User> getUsers(User user) {
         //redisTemplate.delete("users");
-        Object users = redisTemplate.opsForValue().get("users");
+        /*Object users = redisTemplate.opsForValue().get("users");
         List<User> list = new ArrayList<User>();
         if(users==null){
             //查数据库
             list = userMapper.selectByUser(user);
 
-            redisTemplate.opsForValue().set("users", JSON.toJSON(list),20, TimeUnit.SECONDS);
+            redisTemplate.opsForValue().set("users", JSON.toJSON(list),10, TimeUnit.SECONDS);
 
         }else{
             //启用缓存
             list = JSON.parseArray(JSON.toJSONString(users),User.class);
         }
 
-        return list;
+        return list;*/
+        return userMapper.selectByUser(user);
     }
 }

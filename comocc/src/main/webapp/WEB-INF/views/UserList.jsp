@@ -70,6 +70,13 @@
         <i class="fa fa-mail-forward">&nbsp;导出Excel</i>
     </button>
 </div>
+<form id="myForm" action="${pageContext.request.contextPath}/user/getUserModel" method="post" style="text-align: center" >
+    <label>姓名：</label>
+    <input type="text" name="username" maxlength="64" placeholder="姓名" style="width:150px;"/>
+    <label>地址：</label>
+    <input type="text" name="address" maxlength="64" placeholder="地址" style="width:150px;"/>
+    <input id="btnSubmit" class="btn btn-primary" type="submit" value="查询" style="margin-left: 10px;"/>
+</form>
 
 <div style="text-align: center;">
     <table border="1" style="margin: auto" width='60%'>

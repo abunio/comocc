@@ -101,10 +101,10 @@
       <if test="sex != null ">
         OR sex = #{sex}
       </if>
-      <if test="username != null">
+      <if test="username != null and username !='' ">
         OR username LIKE concat('%',#{username},'%')
       </if>
-      <if test="address != null">
+      <if test="address != null and address !='' ">
         OR address LIKE concat('%',#{address},'%')
       </if>
 

@@ -43,7 +43,7 @@ public class UserController {
      * @Author: abunio
      * @Date: 2019/5/14 16:18
      */
-    @RequestMapping(value = "/getUserModel",method = RequestMethod.GET)
+    @RequestMapping(value = "/getUserModel")
     public ModelAndView getUsers1(User user) {
         ModelAndView modelAndView = new ModelAndView();
         //调用service方法得到用户列表
